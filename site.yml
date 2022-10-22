@@ -6,5 +6,6 @@
   tasks:
    - name: addu sers
      ansible.builtin.user:
-      name: hassan
-      uid: 400
+      name: "{{item.name}}"
+      uid: "{{item.id}}"
+     loop: "{{user_list}}"
