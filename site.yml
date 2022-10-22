@@ -8,4 +8,12 @@
      ansible.builtin.user:
       name: "{{item.name}}"
       uid: "{{item.id}}"
+
+      #if you want to delete
+      state: absent 
+      remove: yes
+      ################################################
+      
      loop: "{{user_list}}"
+
+
