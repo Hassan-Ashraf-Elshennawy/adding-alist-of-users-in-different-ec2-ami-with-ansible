@@ -1,0 +1,10 @@
+---
+- name: play book to add alist of users
+  hosts: webservers
+  vars_files:
+    - vars/vars.yml
+  tasks:
+   - name: addu sers
+     ansible.builtin.user:
+      name: hassan
+      uid: 400
